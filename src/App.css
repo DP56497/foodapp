@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: red; /* Tomato color for food vibe */
+  width: 240px;
+  padding: 20px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.sidebar .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-btn {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background: #fff8f0;
+    overflow-y: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    height: 100%;
+    transform: translateX(-100%);
+    overflow: hidden;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .toggle-btn {
+    display: block;
+  }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #ff6347;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.app-container {
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+}
+.sidebar {
+  width: 220px;
+  background: #1e1e2f;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  overflow: hidden;
+}
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+.sidebar a {
+  display: block;
+  margin: 10px 0;
+  color: white;
+  text-decoration: none;
+}
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  border-radius: 5px;
+}
+.main-content {
+  flex: 1;
+  overflow-y: auto; /* Enable scroll here only */
+  background-color: #ecf0f1;
+  padding: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+th {
+  background: #1e1e2f;
+  color: white;
+}
+form input, form select, form button {
+  margin: 5px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+form button {
+  background: #1e1e2f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #1e1e2f;
+}
+/* .inputBox {
+  display: block;
+  padding: 10px;
+  width: 300px;
+  border: 1px solid black;
+  margin: 25px;
+}
+.register{
+  margin-left:30% ;
+}
+.click-to-hover {
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.click-to-hover:hover, .click-to-hover.clicked {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+.signup-btn:hover {
+  background-color:#CF995F; /* Darker blue on hover */
+  /* transform: scale(1.05); Slightly increase size */
+/* }
+.appButton {
+  margin: 25px;
+  padding: 10px;
+  width: 150px;
+  background-color: beige;
+  border: 1px solid;
+  cursor: pointer;
+  
+} */
+
+
+ .signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f9f9f9;
+}
+
+.signup-banner img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.signup-form {
+  background: white;
+  padding: 40px 30px;
+  margin-top: -40px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.signup-form h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inputBox {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.inputBox:focus {
+  border-color: #1e1e2f;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 112, 67, 0.5);
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #1e1e2f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-btn:hover {
+  background: #e65100;
+}
+
