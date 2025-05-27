@@ -30,7 +30,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/User/signup", {
+      const response = await fetch("https://foodbackend-kadu.onrender.com/User/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
