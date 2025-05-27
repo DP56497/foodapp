@@ -17,7 +17,7 @@ function Menu() {
   ]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/menu/")
+    fetch("https://foodbackend-kadu.onrender.com/api/menu/")
       .then((response) => {
         if (!response.ok) throw new Error("Failed to fetch menu");
         return response.json();
@@ -32,7 +32,7 @@ function Menu() {
       price: item.price,
       status: "pending", // Set default status
     };
-    fetch("http://localhost:5000/api/orders", {
+    fetch("https://foodbackend-kadu.onrender.com/api/orders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(orderData),
