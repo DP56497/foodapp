@@ -14,7 +14,7 @@ const Home = () => {
   const [totalPages, setTotalPages] = useState(1);
 
   const fetchUsers = () => {
-    fetch(`http://localhost:5000/auth/users?page=${page}&limit=10`)
+    fetch(`https://foodbackend-kadu.onrender.com/auth/users?page=${page}&limit=10`)
       .then((res) => res.json())
       .then((data) => {
         setUsers(data.users || data);
@@ -39,7 +39,7 @@ const Home = () => {
       return;
     }
     try {
-      const res = await fetch("http://localhost:5000/auth/adduser", {
+      const res = await fetch("https://foodbackend-kadu.onrender.com/auth/adduser", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newUser),
@@ -71,7 +71,7 @@ const Home = () => {
   if (!confirmDelete) return;
 
   try {
-    const res = await fetch(`http://localhost:5000/deleteuser/${id}`, {
+    const res = await fetch(`https://foodbackend-kadu.onrender.com/deleteuser/${id}`, {
       method: "DELETE",
       
     });
@@ -87,7 +87,7 @@ const Home = () => {
     alert("User deleted successfully");
 
     // Refresh user list
-    fetch(`http://localhost:5000/auth/users?page=${page}&limit=10`)
+    fetch(`https://foodbackend-kadu.onrender.com/auth/users?page=${page}&limit=10`)
       .then((res) => res.json())
       .then((data) => {
         setUsers(data.users || []);
