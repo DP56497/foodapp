@@ -80,7 +80,7 @@ const Signup = () => {
 
         {/*  CAPTCHA component */}
         <ReCAPTCHA
-          sitekey="6LcwBDArAAAAAOFvvdg_mpZWaetulRSHZRC6udt6" //  get from Google reCAPTCHA admin console
+          sitekey="6LfSi0srAAAAAFUL_9CumjllVycNZb6c8hyIn83k" //  get from Google reCAPTCHA admin console
           onChange={handleCaptchaChange}
         />
 
