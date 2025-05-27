@@ -167,7 +167,7 @@ const Company = () => {
 
   const fetchImages = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/company/all');
+      const res = await fetch('https://foodbackend-kadu.onrender.com/api/company/all');
       const data = await res.json();
       setImages(data);
     } catch (err) {
@@ -187,7 +187,7 @@ const Company = () => {
 
     try {
       setUploading(true);
-      const res = await fetch('http://localhost:5000/api/company/upload', {
+      const res = await fetch('https://foodbackend-kadu.onrender.com/api/company/upload', {
         method: 'POST',
         body: formData,
       });
@@ -208,7 +208,7 @@ const Company = () => {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/company/${id}`, { method: 'DELETE' });
+      await fetch(`https://foodbackend-kadu.onrender.com/api/company/${id}`, { method: 'DELETE' });
       fetchImages();
     } catch (error) {
       console.error('Delete failed', error);
@@ -223,7 +223,7 @@ const Company = () => {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/api/orders", {
+      const res = await fetch("https://foodbackend-kadu.onrender.com/api/orders", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
